@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DailyDetailViewController">
+            <connections>
+                <outlet property="sureBtn" destination="flB-M4-yvE" id="zdQ-Oh-tRs"/>
+                <outlet property="table" destination="heJ-PC-5Li" id="dBw-wB-9jx"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="heJ-PC-5Li">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="509"/>
+                    <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="Sya-7U-OB3"/>
+                        <outlet property="delegate" destination="-1" id="kKI-kG-YHe"/>
+                    </connections>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="flB-M4-yvE">
+                    <rect key="frame" x="8" y="517" width="304" height="43"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="43" id="lo3-9L-MUz"/>
+                    </constraints>
+                    <state key="normal" title="新建工作项目">
+                        <color key="titleColor" red="0.69752261510000002" green="0.0" blue="0.053325452299999999" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="sureBtnClick:" destination="-1" eventType="touchUpInside" id="Dh2-xB-sBW"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="heJ-PC-5Li" secondAttribute="trailing" id="Hd1-6O-N2Z"/>
+                <constraint firstItem="heJ-PC-5Li" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="NfJ-YU-Z7L"/>
+                <constraint firstAttribute="trailing" secondItem="flB-M4-yvE" secondAttribute="trailing" constant="8" id="RMn-d3-B4n"/>
+                <constraint firstItem="heJ-PC-5Li" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="X6a-yZ-r3A"/>
+                <constraint firstItem="flB-M4-yvE" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="Xm7-jq-Df1"/>
+                <constraint firstAttribute="bottom" secondItem="flB-M4-yvE" secondAttribute="bottom" constant="8" id="YKN-LG-h2N"/>
+                <constraint firstItem="flB-M4-yvE" firstAttribute="top" secondItem="heJ-PC-5Li" secondAttribute="bottom" constant="8" id="Yaf-2b-ZSy"/>
+            </constraints>
+            <point key="canvasLocation" x="248" y="206"/>
+        </view>
+    </objects>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

@@ -1,0 +1,28 @@
+PODS:
+  - FSCalendar (0.8.1)
+  - ReactiveCocoa (2.5):
+    - ReactiveCocoa/UI (= 2.5)
+  - ReactiveCocoa/Core (2.5):
+    - ReactiveCocoa/no-arc
+  - ReactiveCocoa/no-arc (2.5)
+  - ReactiveCocoa/UI (2.5):
+    - ReactiveCocoa/Core
+  - RichStyleLabel (0.0.1)
+  - SVProgressHUD (1.1.3)
+  - UMengAnalytics-NO-IDFA (3.5.13)
+
+DEPENDENCIES:
+  - FSCalendar
+  - ReactiveCocoa
+  - RichStyleLabel
+  - SVProgressHUD
+  - UMengAnalytics-NO-IDFA
+
+SPEC CHECKSUMS:
+  FSCalendar: b8c459cdf9ef97822b4b13262e8132438e23d794
+  ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
+  RichStyleLabel: 7b9f80a4fcf4a9b3c6b3b2ba2805d53b4f4912cc
+  SVProgressHUD: 748080e4f36e603f6c02aec292664239df5279c1
+  UMengAnalytics-NO-IDFA: ef492cf232cd313b562b324e17ce18353baadf9f
+
+COCOAPODS: 0.38.2

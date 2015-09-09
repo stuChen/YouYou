@@ -1,0 +1,46 @@
+//
+//  PrefixHeader.pch
+//  Sahara
+//
+//  Created by huangcan on 15/5/25.
+//  Copyright (c) 2015年 bodecn. All rights reserved.
+//
+
+#ifndef Sahara_PrefixHeader_pch
+#define Sahara_PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import "ReactiveCocoa.h"
+#import "GetLocation.h"
+#import "AFNetworking.h"
+#import "RequestUrl.h"
+#import "SVProgressHUD.h"
+#import "RequestManager.h"
+#import "UserData.h"
+#import "Data.h"
+#import "ZSYPopoverListView.h"
+
+#ifdef DEBUG
+# define DLog(fmt, ...) NSLog((@"\n[文件名:%s]\n" "[函数名:%s]\n" "[行号:%d] \n" fmt), __FILE__, __FUNCTION__, __LINE__, ##__VA_ARGS__);
+#else
+# define DLog(...);
+#endif
+
+#define ScreenHeight [[UIScreen mainScreen] bounds].size.height
+#define ScreenWidth [[UIScreen mainScreen] bounds].size.width
+#define RGBA(R/*红*/, G/*绿*/, B/*蓝*/, A/*透明*/) \
+[UIColor colorWithRed:R/255.f green:G/255.f blue:B/255.f alpha:A]
+
+#define MAINCOLOR RGBA(172, 0, 12, 1)
+#define COLORGRAY RGBA(149,149,149,1)
+#define COLORBLACK RGBA(70,70,70,1)
+#define BACK_COLOR RGBA(254,248,240,1)
+
+#endif
+#endif

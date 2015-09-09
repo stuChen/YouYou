@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>1497ECAF-A7F3-4A69-A88B-536A447B8DD7</string>
+	<key>IDESourceControlProjectName</key>
+	<string>YouYou</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>EA6E203AB0E5C8B36AFEDB1A48843B749508E231</key>
+		<string>https://git.coding.net/chenweiBD/youyou.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>YouYou/YouYou.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>EA6E203AB0E5C8B36AFEDB1A48843B749508E231</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://git.coding.net/chenweiBD/youyou.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>EA6E203AB0E5C8B36AFEDB1A48843B749508E231</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>EA6E203AB0E5C8B36AFEDB1A48843B749508E231</string>
+			<key>IDESourceControlWCCName</key>
+			<string>youyou</string>
+		</dict>
+	</array>
+</dict>
+</plist>

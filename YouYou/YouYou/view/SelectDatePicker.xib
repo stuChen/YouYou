@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SelectDatePicker">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VeO-n6-c2T">
+                    <rect key="frame" x="8" y="146" width="304" height="275"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gQG-b2-9Db">
+                            <rect key="frame" x="167" y="237" width="129" height="30"/>
+                            <state key="normal" title="确定"/>
+                            <connections>
+                                <action selector="sureBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="Nir-rG-NuE"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7vK-SD-uBT">
+                            <rect key="frame" x="8" y="237" width="129" height="30"/>
+                            <state key="normal" title="取消"/>
+                            <connections>
+                                <action selector="cancleBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="Ltc-eu-LUM"/>
+                            </connections>
+                        </button>
+                        <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="adE-5M-3lA">
+                            <rect key="frame" x="0.0" y="8" width="304" height="216"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="216" id="GOZ-1Y-FlZ"/>
+                            </constraints>
+                            <date key="date" timeIntervalSinceReferenceDate="457683402.01090002">
+                                <!--2015-07-04 06:16:42 +0000-->
+                            </date>
+                        </datePicker>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="7vK-SD-uBT" secondAttribute="bottom" constant="8" id="327-dI-LYc"/>
+                        <constraint firstItem="adE-5M-3lA" firstAttribute="top" secondItem="VeO-n6-c2T" secondAttribute="top" constant="8" id="AtA-LB-6hE"/>
+                        <constraint firstAttribute="bottom" secondItem="gQG-b2-9Db" secondAttribute="bottom" constant="8" id="KIc-ad-ONC"/>
+                        <constraint firstAttribute="trailing" secondItem="adE-5M-3lA" secondAttribute="trailing" id="XPt-TP-Gjm"/>
+                        <constraint firstItem="gQG-b2-9Db" firstAttribute="height" secondItem="7vK-SD-uBT" secondAttribute="height" id="cOh-aq-3uh"/>
+                        <constraint firstItem="7vK-SD-uBT" firstAttribute="leading" secondItem="VeO-n6-c2T" secondAttribute="leading" constant="8" id="eGm-WC-Abr"/>
+                        <constraint firstAttribute="trailing" secondItem="gQG-b2-9Db" secondAttribute="trailing" constant="8" id="hLj-OJ-eaD"/>
+                        <constraint firstAttribute="height" constant="275" id="jy8-YR-ECg"/>
+                        <constraint firstItem="gQG-b2-9Db" firstAttribute="centerY" secondItem="7vK-SD-uBT" secondAttribute="centerY" id="lW4-Pw-qFb"/>
+                        <constraint firstItem="adE-5M-3lA" firstAttribute="leading" secondItem="VeO-n6-c2T" secondAttribute="leading" id="ry6-S5-uE6"/>
+                        <constraint firstItem="gQG-b2-9Db" firstAttribute="width" secondItem="7vK-SD-uBT" secondAttribute="width" id="xHI-Mg-B44"/>
+                        <constraint firstItem="gQG-b2-9Db" firstAttribute="leading" secondItem="7vK-SD-uBT" secondAttribute="trailing" constant="30" id="xk7-CZ-lnN"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="centerX" secondItem="VeO-n6-c2T" secondAttribute="centerX" id="PIa-ai-lF9"/>
+                <constraint firstAttribute="centerY" secondItem="VeO-n6-c2T" secondAttribute="centerY" id="Xt2-tr-iec"/>
+                <constraint firstItem="VeO-n6-c2T" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="p5g-kK-Ndu"/>
+                <constraint firstAttribute="trailing" secondItem="VeO-n6-c2T" secondAttribute="trailing" constant="8" id="pCQ-yM-OTd"/>
+            </constraints>
+            <connections>
+                <outlet property="cancleBtn" destination="7vK-SD-uBT" id="qF5-pM-2G0"/>
+                <outlet property="datePiker" destination="adE-5M-3lA" id="UtV-h7-lYY"/>
+                <outlet property="sureBtn" destination="gQG-b2-9Db" id="gLz-gS-dds"/>
+            </connections>
+            <point key="canvasLocation" x="139" y="256"/>
+        </view>
+    </objects>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

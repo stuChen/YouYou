@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ReadWorkPlanViewController">
+            <connections>
+                <outlet property="selectBtn" destination="pSc-T4-qXi" id="wO9-gY-onq"/>
+                <outlet property="table" destination="N6v-69-jI6" id="GXQ-cz-swE"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tbs-nu-3yh">
+                    <rect key="frame" x="0.0" y="64" width="320" height="44"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pSc-T4-qXi">
+                            <rect key="frame" x="8" y="11" width="23" height="22"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="23" id="M91-uh-q8z"/>
+                                <constraint firstAttribute="height" constant="22" id="jYa-dY-ctB"/>
+                            </constraints>
+                            <state key="normal" image="checkbox">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="selected" image="checkbox_selected"/>
+                            <connections>
+                                <action selector="Select:" destination="-1" eventType="touchUpInside" id="Emk-15-009"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="仅显示已提交待批阅" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="273" translatesAutoresizingMaskIntoConstraints="NO" id="z35-YH-er4">
+                            <rect key="frame" x="39" y="14" width="273" height="16"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <color key="textColor" red="0.6879882812" green="0.0" blue="0.054276315790000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="z35-YH-er4" secondAttribute="trailing" constant="8" id="6Bt-3N-Wuk"/>
+                        <constraint firstAttribute="centerY" secondItem="pSc-T4-qXi" secondAttribute="centerY" id="ORa-7R-JGS"/>
+                        <constraint firstAttribute="height" constant="44" id="OST-pM-8tf"/>
+                        <constraint firstAttribute="centerY" secondItem="z35-YH-er4" secondAttribute="centerY" id="WrS-Ov-6zZ"/>
+                        <constraint firstItem="pSc-T4-qXi" firstAttribute="leading" secondItem="tbs-nu-3yh" secondAttribute="leading" constant="8" id="dWr-tR-6u1"/>
+                        <constraint firstItem="z35-YH-er4" firstAttribute="leading" secondItem="pSc-T4-qXi" secondAttribute="trailing" constant="8" id="wfg-er-jzD"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="N6v-69-jI6">
+                    <rect key="frame" x="0.0" y="108" width="320" height="460"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="ouF-vl-zNm"/>
+                        <outlet property="delegate" destination="-1" id="jaI-PB-7Z6"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="tbs-nu-3yh" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="6KI-wA-Wjc"/>
+                <constraint firstItem="N6v-69-jI6" firstAttribute="top" secondItem="tbs-nu-3yh" secondAttribute="bottom" id="Bq4-tb-POp"/>
+                <constraint firstAttribute="trailing" secondItem="tbs-nu-3yh" secondAttribute="trailing" id="R5h-61-si5"/>
+                <constraint firstAttribute="bottom" secondItem="N6v-69-jI6" secondAttribute="bottom" id="XlZ-sp-Znp"/>
+                <constraint firstAttribute="trailing" secondItem="N6v-69-jI6" secondAttribute="trailing" id="baH-zf-f4o"/>
+                <constraint firstItem="tbs-nu-3yh" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="eIJ-cz-kZY"/>
+                <constraint firstItem="N6v-69-jI6" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="uqH-Yn-zmO"/>
+            </constraints>
+            <point key="canvasLocation" x="228" y="372"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="checkbox" width="23" height="18"/>
+        <image name="checkbox_selected" width="23" height="18"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

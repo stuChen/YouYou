@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PhoneBookViewController">
+            <connections>
+                <outlet property="NothingLabel" destination="MB1-ZC-8Ye" id="xIV-nR-RgU"/>
+                <outlet property="SearchBtn" destination="vUt-mh-fR5" id="3VU-0A-CXM"/>
+                <outlet property="cusTypeBtn" destination="hgp-wk-IqR" id="W1N-kI-mAn"/>
+                <outlet property="searchText" destination="G4n-ah-XIt" id="EaQ-mk-oYz"/>
+                <outlet property="table" destination="tBR-9A-HTm" id="HVv-hz-J2l"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="未找到您想要的数据" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MB1-ZC-8Ye">
+                    <rect key="frame" x="8" y="273" width="304" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hgp-wk-IqR">
+                    <rect key="frame" x="8" y="72" width="61" height="33"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="61" id="A6v-sQ-ztn"/>
+                        <constraint firstAttribute="height" constant="33" id="P1D-yn-spy"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <inset key="titleEdgeInsets" minX="-30" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <inset key="imageEdgeInsets" minX="46" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="员工" image="未标题-1_03">
+                        <color key="titleColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                    </state>
+                    <connections>
+                        <action selector="cusTypeClick:" destination="-1" eventType="touchUpInside" id="vF3-wY-xge"/>
+                    </connections>
+                </button>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G4n-ah-XIt">
+                    <rect key="frame" x="77" y="74" width="181" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vUt-mh-fR5">
+                    <rect key="frame" x="266" y="72" width="46" height="33"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="46" id="Cu1-DX-TIH"/>
+                        <constraint firstAttribute="height" constant="33" id="f9q-0O-0mi"/>
+                    </constraints>
+                    <state key="normal" title="搜索">
+                        <color key="titleColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                    </state>
+                    <connections>
+                        <action selector="SearchClick:" destination="-1" eventType="touchUpInside" id="Tgb-Px-gCM"/>
+                    </connections>
+                </button>
+                <tableView hidden="YES" clipsSubviews="YES" tag="100" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="tBR-9A-HTm">
+                    <rect key="frame" x="0.0" y="113" width="320" height="455"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="dyz-R5-9K5"/>
+                        <outlet property="delegate" destination="-1" id="5eg-MG-L60"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="tBR-9A-HTm" secondAttribute="bottom" id="4rC-1r-qjJ"/>
+                <constraint firstAttribute="trailing" secondItem="tBR-9A-HTm" secondAttribute="trailing" id="C7D-h1-4Sj"/>
+                <constraint firstItem="tBR-9A-HTm" firstAttribute="top" secondItem="vUt-mh-fR5" secondAttribute="bottom" constant="8" id="LaV-CY-b0X"/>
+                <constraint firstItem="tBR-9A-HTm" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="LdU-Fw-VE6"/>
+                <constraint firstAttribute="trailing" secondItem="MB1-ZC-8Ye" secondAttribute="trailing" constant="8" id="NJc-k8-0yj"/>
+                <constraint firstItem="vUt-mh-fR5" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="72" id="RfU-Ya-aGX"/>
+                <constraint firstAttribute="trailing" secondItem="vUt-mh-fR5" secondAttribute="trailing" constant="8" id="SWW-a6-Y2L"/>
+                <constraint firstItem="G4n-ah-XIt" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="74" id="dvl-zV-Lq6"/>
+                <constraint firstItem="G4n-ah-XIt" firstAttribute="leading" secondItem="hgp-wk-IqR" secondAttribute="trailing" constant="8" id="odU-OB-bsV"/>
+                <constraint firstAttribute="centerY" secondItem="MB1-ZC-8Ye" secondAttribute="centerY" id="omB-OQ-Xqb"/>
+                <constraint firstItem="MB1-ZC-8Ye" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="qnt-cJ-Vim"/>
+                <constraint firstItem="hgp-wk-IqR" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="72" id="tap-n9-kqL"/>
+                <constraint firstItem="hgp-wk-IqR" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="txH-vR-02W"/>
+                <constraint firstAttribute="centerX" secondItem="MB1-ZC-8Ye" secondAttribute="centerX" id="u6C-xr-9at"/>
+                <constraint firstItem="vUt-mh-fR5" firstAttribute="leading" secondItem="G4n-ah-XIt" secondAttribute="trailing" constant="8" id="yJv-6k-JOn"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+            <point key="canvasLocation" x="280" y="248"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="未标题-1_03" width="10" height="9"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
