@@ -24,7 +24,7 @@
 	@synchronized(self) {
 		if (_locationManager == nil) {
 			_locationManager = [[CLLocationManager alloc] init];
-            _locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation;
+            _locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters;
             _locationManager.pausesLocationUpdatesAutomatically = NO; //该模式是抵抗ios在后台杀死程序设置，iOS会根据当前手机使用状况会自动关闭某些应用程序的后台刷新，该语句申明不能够被暂停，但是不一定,iOS系统在性能不佳的情况下强制结束应用刷新
 		}
 	}
@@ -45,7 +45,7 @@
 -(void)applicationEnterBackground{
     CLLocationManager *locationManager = [LocationTracker sharedLocationManager];
     locationManager.delegate = self;
-    locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation;
+    locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters;
     locationManager.distanceFilter = kCLDistanceFilterNone;
     
     if(IS_OS_8_OR_LATER) {
@@ -69,7 +69,7 @@
     
     CLLocationManager *locationManager = [LocationTracker sharedLocationManager];
     locationManager.delegate = self;
-    locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation;
+    locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters;
     locationManager.distanceFilter = kCLDistanceFilterNone;
     
     if(IS_OS_8_OR_LATER) {
@@ -95,7 +95,7 @@
             NSLog(@"authorizationStatus authorized");
             CLLocationManager *locationManager = [LocationTracker sharedLocationManager];
             locationManager.delegate = self;
-            locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation;
+            locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters;
             locationManager.distanceFilter = kCLDistanceFilterNone;
             
             if(IS_OS_8_OR_LATER) {

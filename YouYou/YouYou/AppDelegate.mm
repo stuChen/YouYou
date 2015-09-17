@@ -78,13 +78,15 @@
     }
     
     [self.locationTracker startLocationTracking];
-    //默认执行一次
-//    [self updateLocation];
     [self performSelector:@selector(updateLocation) withObject:nil afterDelay:5];
 }
 //第一次请求完成
 - (void)startTimer:(NSDictionary *)dic {
-    if (!self.locationUpdateTimer) {
+    
+    if (self.locationUpdateTimer) {
+        [self.locationUpdateTimer invalidate];
+        self.locationUpdateTimer = nil;
+    }
         _responseTimerInfo = dic;
         //设定向服务器发送位置信息的时间间隔
         NSTimeInterval time = 20 * 60;
@@ -102,7 +104,6 @@
                                        userInfo:nil
                                         repeats:YES];
         [[NSRunLoop currentRunLoop]addTimer:self.locationUpdateTimer forMode:NSDefaultRunLoopMode];
-    }
 }
 
 
@@ -116,9 +117,7 @@
     
     NSInteger startTime = 0;
     NSInteger stopTime = 24;
-//    if ([[NSUserDefaults standardUserDefaults] integerForKey:@"begin_hour"]) {
-//        startTime = [[NSUserDefaults standardUserDefaults] integerForKey:@"begin_hour"];
-//    }
+
     if (_responseTimerInfo) {
         if (_responseTimerInfo[@"begin_hour"]) {
             startTime = [_responseTimerInfo[@"begin_hour"] integerValue];
@@ -131,10 +130,6 @@
         }
         
     }
-//    if ([[NSUserDefaults standardUserDefaults] integerForKey:@"end_hour"]) {
-//        stopTime = [[NSUserDefaults standardUserDefaults] integerForKey:@"end_hour"];
-//    }
-    
     NSDate *date = [NSDate date];
     if (date.fs_hour > startTime && date.fs_hour < stopTime) {
         NSLog(@"开始获取定位信息...");
