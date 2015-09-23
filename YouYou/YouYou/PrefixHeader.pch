@@ -16,7 +16,6 @@
 #ifdef __OBJC__
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "ReactiveCocoa.h"
 #import "GetLocation.h"
 #import "AFNetworking.h"
 #import "RequestUrl.h"

@@ -20,7 +20,7 @@
 #import "ReadWorkPlanViewController.h"
 
 
-@interface MianViewController ()<UIScrollViewDelegate>
+@interface MianViewController ()<UIScrollViewDelegate,UIAlertViewDelegate>
 
 @end
 
@@ -70,17 +70,9 @@
 {
     UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"警告！"
                                                    message:@"是否确认退出？"
-                                                  delegate:nil
+                                                  delegate:self
                                          cancelButtonTitle:@"取消"
                                          otherButtonTitles:@"确定", nil];
-    [[alert rac_buttonClickedSignal] subscribeNext:^(NSNumber *indexNumber) {
-        if ([indexNumber intValue] == 1) {
-            //结束定时上传坐标
-            [[NSNotificationCenter defaultCenter] postNotificationName:@"stopUplocationTracker" object:nil];
-            [self.navigationController popViewControllerAnimated:YES];
-        } else {
-        }
-    }];
     [alert show];
 
 }
@@ -199,7 +191,15 @@
 }
 
 
-
+#pragma mark - alertDelegate
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if (buttonIndex == 1) {
+        //结束定时上传坐标
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"stopUplocationTracker" object:nil];
+        [self.navigationController popViewControllerAnimated:YES];
+    } else {
+    }
+}
 
 
 

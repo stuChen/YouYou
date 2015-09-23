@@ -14,6 +14,8 @@
 		747982CC1B450134000511A8 /* NoticeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 747982C81B450134000511A8 /* NoticeTableViewCell.m */; };
 		747982CD1B450134000511A8 /* NoticeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 747982C91B450134000511A8 /* NoticeTableViewCell.xib */; };
 		747982CE1B450134000511A8 /* YY_Button.m in Sources */ = {isa = PBXBuildFile; fileRef = 747982CB1B450134000511A8 /* YY_Button.m */; };
+		74980E5F1BB2E29E00F95401 /* libPushSDK-1.8.5.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 74980E5D1BB2E29E00F95401 /* libPushSDK-1.8.5.a */; settings = {ASSET_TAGS = (); }; };
+		74980E601BB2E29E00F95401 /* PushConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 74980E5E1BB2E29E00F95401 /* PushConfig.plist */; settings = {ASSET_TAGS = (); }; };
 		74A675321B4FFC79007D043E /* ReplyWorkPlanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74A675301B4FFC79007D043E /* ReplyWorkPlanViewController.m */; };
 		74A675331B4FFC79007D043E /* ReplyWorkPlanViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74A675311B4FFC79007D043E /* ReplyWorkPlanViewController.xib */; };
 		74A675371B500C58007D043E /* AskToLeaveDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74A675351B500C58007D043E /* AskToLeaveDetailViewController.m */; };
@@ -137,6 +139,9 @@
 		747982C91B450134000511A8 /* NoticeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoticeTableViewCell.xib; sourceTree = "<group>"; };
 		747982CA1B450134000511A8 /* YY_Button.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YY_Button.h; sourceTree = "<group>"; };
 		747982CB1B450134000511A8 /* YY_Button.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YY_Button.m; sourceTree = "<group>"; };
+		74980E5C1BB2E29E00F95401 /* APService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APService.h; sourceTree = "<group>"; };
+		74980E5D1BB2E29E00F95401 /* libPushSDK-1.8.5.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libPushSDK-1.8.5.a"; sourceTree = "<group>"; };
+		74980E5E1BB2E29E00F95401 /* PushConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PushConfig.plist; sourceTree = "<group>"; };
 		74A6752F1B4FFC79007D043E /* ReplyWorkPlanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReplyWorkPlanViewController.h; sourceTree = "<group>"; };
 		74A675301B4FFC79007D043E /* ReplyWorkPlanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReplyWorkPlanViewController.m; sourceTree = "<group>"; };
 		74A675311B4FFC79007D043E /* ReplyWorkPlanViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReplyWorkPlanViewController.xib; sourceTree = "<group>"; };
@@ -313,6 +318,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				74FA6BD61B4D114C00EE442C /* CoreTelephony.framework in Frameworks */,
+				74980E5F1BB2E29E00F95401 /* libPushSDK-1.8.5.a in Frameworks */,
 				74E3551D1B40253E0029DDD0 /* SystemConfiguration.framework in Frameworks */,
 				74E355191B4025220029DDD0 /* CoreLocation.framework in Frameworks */,
 				74E355171B4024D90029DDD0 /* BaiduMapAPI.framework in Frameworks */,
@@ -387,6 +393,16 @@
 				74D09EEF1B53626A002FA0E2 /* DatePickerBtn.m */,
 			);
 			path = view;
+			sourceTree = "<group>";
+		};
+		74980E5B1BB2E29E00F95401 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				74980E5C1BB2E29E00F95401 /* APService.h */,
+				74980E5D1BB2E29E00F95401 /* libPushSDK-1.8.5.a */,
+				74980E5E1BB2E29E00F95401 /* PushConfig.plist */,
+			);
+			path = lib;
 			sourceTree = "<group>";
 		};
 		74D4BBEB1B4F9F4700963C20 /* ReadworkPlan */ = {
@@ -650,6 +666,7 @@
 		74E355151B4024D90029DDD0 /* 3rd */ = {
 			isa = PBXGroup;
 			children = (
+				74980E5B1BB2E29E00F95401 /* lib */,
 				74E2986E1B42CEB3004FD872 /* AFNetworking */,
 				74E298621B42C3F1004FD872 /* ZSYPopoverListView.h */,
 				74E298631B42C3F1004FD872 /* ZSYPopoverListView.m */,
@@ -894,6 +911,7 @@
 				74D63C611B4EC751006DADEA /* DailyLogDetailViewController.xib in Resources */,
 				747982CD1B450134000511A8 /* NoticeTableViewCell.xib in Resources */,
 				74D63C6C1B4EC751006DADEA /* SetServiceViewController.xib in Resources */,
+				74980E601BB2E29E00F95401 /* PushConfig.plist in Resources */,
 				74D63C5B1B4EC751006DADEA /* AskToLeaveViewController.xib in Resources */,
 				74D12F291B47B7090034DBC5 /* SearchSignqueryTableViewCell.xib in Resources */,
 				74A675381B500C58007D043E /* AskToLeaveDetailViewController.xib in Resources */,
@@ -1146,17 +1164,19 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/YouYou/3rd",
 				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/YouYou/PrefixHeader.pch";
 				INFOPLIST_FILE = YouYou/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/YouYou/3rd/UMAnalytics_Sdk_3.5.12",
+					"$(PROJECT_DIR)/YouYou/3rd/lib",
 				);
 				PRODUCT_NAME = "优幼销售管理";
 				PROVISIONING_PROFILE = "";
@@ -1171,17 +1191,19 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/YouYou/3rd",
 				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/YouYou/PrefixHeader.pch";
 				INFOPLIST_FILE = YouYou/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/YouYou/3rd/UMAnalytics_Sdk_3.5.12",
+					"$(PROJECT_DIR)/YouYou/3rd/lib",
 				);
 				PRODUCT_NAME = "优幼销售管理";
 				PROVISIONING_PROFILE = "";

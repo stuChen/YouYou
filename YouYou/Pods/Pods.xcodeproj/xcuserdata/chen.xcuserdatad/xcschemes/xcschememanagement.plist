@@ -14,11 +14,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>ReactiveCocoa.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>RichStyleLabel.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -32,12 +27,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>00B23972E3C7F6D4CFB41DC69C7D50AB</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>114DC291CC7ABFA8DB5FFA482FCCE637</key>
+		<key>27479B35014A7D65BDF0FEF32E1065D5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -47,12 +37,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6951DA9871DA259A9AAA6EFC68AEF8EB</key>
+		<key>B281DA29A9C3EDFB45BA53651F6BA611</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B281DA29A9C3EDFB45BA53651F6BA611</key>
+		<key>F075111F6B15B87AAC092DF411807C0D</key>
 		<dict>
 			<key>primary</key>
 			<true/>

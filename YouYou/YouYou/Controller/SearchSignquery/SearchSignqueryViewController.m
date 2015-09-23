@@ -45,7 +45,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *cellDeque = @"cell1";
-    SearchSignqueryTableViewCell *cell = [tableView dequeueReusableHeaderFooterViewWithIdentifier:cellDeque];
+    SearchSignqueryTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellDeque];
     if (!cell) {
         cell = [[NSBundle mainBundle] loadNibNamed:@"SearchSignqueryTableViewCell" owner:nil options:nil].firstObject;
     }

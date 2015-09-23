@@ -120,7 +120,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *cellDeque = @"cell1";
-    UITableViewCell *cell = [tableView dequeueReusableHeaderFooterViewWithIdentifier:cellDeque];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellDeque];
     if (!cell) {
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellDeque];
     }
