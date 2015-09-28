@@ -1162,8 +1162,8 @@
 			baseConfigurationReference = B5A86E1B071B2EB6591918A1 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Chengdu Byrd dream Technology Co. Ltd.";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Chengdu Byrd dream Technology Co. Ltd.";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1179,7 +1179,7 @@
 					"$(PROJECT_DIR)/YouYou/3rd/lib",
 				);
 				PRODUCT_NAME = "优幼销售管理";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "6380bd43-154d-4d5e-91d9-8e742ce3f328";
 				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
@@ -1189,8 +1189,8 @@
 			baseConfigurationReference = 2685DF5FBAA4800472436839 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Chengdu Byrd dream Technology Co. Ltd.";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Chengdu Byrd dream Technology Co. Ltd.";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1206,7 +1206,7 @@
 					"$(PROJECT_DIR)/YouYou/3rd/lib",
 				);
 				PRODUCT_NAME = "优幼销售管理";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "6380bd43-154d-4d5e-91d9-8e742ce3f328";
 				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Release;

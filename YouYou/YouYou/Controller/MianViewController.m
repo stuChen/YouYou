@@ -18,6 +18,7 @@
 #import "LocationCollectViewController.h"
 #import "PhoneBookViewController.h"
 #import "ReadWorkPlanViewController.h"
+#import "APService.h"
 
 
 @interface MianViewController ()<UIScrollViewDelegate,UIAlertViewDelegate>
@@ -65,7 +66,34 @@
     
     //开启定时上传坐标
     [[NSNotificationCenter defaultCenter] postNotificationName:@"startUplocationTracker" object:nil];
+    [self setTags];
 }
+//设置标签
+- (void)setTags {
+    NSString *alias = [NSString stringWithFormat:@"YY_IOS_%@",[UserData keyForUser:@"username"]];
+    [APService setTags:[NSSet set]
+                 alias:alias
+      callbackSelector:@selector(tagsAliasCallback:tags:alias:)
+                target:self];
+}
+static int try = 0;
+- (void)tagsAliasCallback:(int)iResCode
+                     tags:(NSSet *)tags
+                    alias:(NSString *)alias {
+    NSString *callbackString =
+    [NSString stringWithFormat:@"%d, \ntags: %@, \nalias: %@\n", iResCode,
+     tags, alias];
+    if (iResCode != 0 && alias.length > 0 && try < 3) {
+        try++;
+        [self setTags];
+    }
+    else {
+        try = 0;
+    }
+    NSLog(@"TagsAlias回调:%@", callbackString);
+    
+}
+
 - (void)signOut
 {
     UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"警告！"
@@ -194,6 +222,8 @@
 #pragma mark - alertDelegate
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
     if (buttonIndex == 1) {
+        //取消设置标签
+        [APService setTags:[NSSet set] alias:@"" callbackSelector:@selector(tagsAliasCallback:tags:alias:) target:self];
         //结束定时上传坐标
         [[NSNotificationCenter defaultCenter] postNotificationName:@"stopUplocationTracker" object:nil];
         [self.navigationController popViewControllerAnimated:YES];

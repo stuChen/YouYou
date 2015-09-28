@@ -65,6 +65,7 @@
                                                    UIRemoteNotificationTypeAlert)
                                        categories:nil];
     [APService setupWithOption:launchOptions];
+    [self initTrack];
     
     return YES;
 }
@@ -80,14 +81,17 @@
 
 
 
-#pragma mark -
--(void)setUpLocationTraker{
+#pragma mark - 
+//
+- (void)initTrack {
     if (!self.locationTracker) {
         self.locationTracker = [[LocationTracker alloc]init];
     }
     
     [self.locationTracker startLocationTracking];
-    [self performSelector:@selector(updateLocation) withObject:nil afterDelay:5];
+}
+-(void)setUpLocationTraker{
+    [self performSelector:@selector(updateLocation) withObject:nil afterDelay:2];
 }
 //第一次请求完成
 - (void)startTimer:(NSDictionary *)dic {
@@ -126,25 +130,91 @@
     
     NSInteger startTime = 0;
     NSInteger stopTime = 24;
-
-    if (_responseTimerInfo) {
-        if (_responseTimerInfo[@"begin_hour"]) {
-            startTime = [_responseTimerInfo[@"begin_hour"] integerValue];
-        }
-        
-    }
-    if (_responseTimerInfo) {
-        if (_responseTimerInfo[@"end_hour"]) {
-            stopTime = [_responseTimerInfo[@"end_hour"] integerValue];
-        }
-        
-    }
     NSDate *date = [NSDate date];
-    if (date.fs_hour > startTime && date.fs_hour < stopTime) {
-        NSLog(@"开始获取定位信息...");
-        //向服务器发送位置信息
-        [self.locationTracker updateLocationToServer];
+    if (_responseTimerInfo) {
+        
+        startTime = [_responseTimerInfo[@"begin_hour"] integerValue];
+        stopTime  = [_responseTimerInfo[@"end_hour"] integerValue];
+        //起始时间为整数
+        if ([[NSString stringWithFormat:@"%@",_responseTimerInfo[@"begin_hour"]] length] <= 2) {
+            //结束时间为整数
+            if ([[NSString stringWithFormat:@"%@",_responseTimerInfo[@"end_hour"]] length] <= 2) {
+                
+                if (date.fs_hour >= startTime && date.fs_hour < stopTime) {
+                    NSLog(@"开始获取定位信息...");
+                    //向服务器发送位置信息
+                    [self.locationTracker updateLocationToServer];
+                }
+            }
+            else {
+                //结束时间不为整数
+                
+                if (date.fs_hour >= startTime && date.fs_hour <= stopTime) {
+                    NSLog(@"开始获取定位信息...");
+                    if (date.fs_hour == stopTime) {
+                        if (date.fs_minute <= 30) {
+                            [self.locationTracker updateLocationToServer];
+                        }
+                    }
+                    else {
+                        NSLog(@"开始获取定位信息...");
+                        //向服务器发送位置信息
+                        [self.locationTracker updateLocationToServer];
+                    }
+                }
+            }
+        }
+        else {
+            //结束时间为整数
+            if ([[NSString stringWithFormat:@"%@",_responseTimerInfo[@"end_hour"]] length] <= 2) {
+                
+                if (date.fs_hour >= startTime && date.fs_hour < stopTime) {
+                    NSLog(@"开始获取定位信息...");
+                    if (date.fs_hour == startTime) {
+                        if (date.fs_minute >= 30) {
+                            //向服务器发送位置信息
+                            [self.locationTracker updateLocationToServer];
+                        }
+                    }
+                    else {
+                        //向服务器发送位置信息
+                        [self.locationTracker updateLocationToServer];
+                    }
+                }
+            }
+            else {
+                //结束时间不为整数
+                
+                if (date.fs_hour >= startTime && date.fs_hour <= stopTime) {
+                    NSLog(@"开始获取定位信息...");
+                    if (date.fs_hour == startTime) {
+                        if (date.fs_minute >= 30) {
+                            //向服务器发送位置信息
+                            [self.locationTracker updateLocationToServer];
+                        }
+                    }
+                    else if (date.fs_hour == stopTime) {
+                        if (date.fs_minute <= 30) {
+                            //向服务器发送位置信息
+                            [self.locationTracker updateLocationToServer];
+                        }
+                    }
+                    else {
+                        //向服务器发送位置信息
+                        [self.locationTracker updateLocationToServer];
+                    }
+                }
+            }
+        }
     }
+    else {
+        if (date.fs_hour >= startTime && date.fs_hour < stopTime) {
+            NSLog(@"开始获取定位信息...");
+            //向服务器发送位置信息
+            [self.locationTracker updateLocationToServer];
+        }
+    }
+    
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
