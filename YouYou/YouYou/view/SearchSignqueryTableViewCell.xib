@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
@@ -12,11 +12,12 @@
             <rect key="frame" x="0.0" y="0.0" width="321" height="153"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <rect key="frame" x="0.0" y="0.0" width="321" height="152"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="2015-07-02" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fTe-xd-WCE">
-                        <rect key="frame" x="8" y="8" width="71" height="16"/>
+                        <rect key="frame" x="8" y="8" width="74" height="16"/>
+                        <animations/>
                         <constraints>
                             <constraint firstAttribute="width" constant="105" id="Bty-l7-XCk"/>
                             <constraint firstAttribute="height" constant="19" id="CTJ-zX-hfD"/>
@@ -38,7 +39,8 @@
                         </variation>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="星期四" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DNs-xF-sAP">
-                        <rect key="frame" x="86" y="8" width="45" height="18"/>
+                        <rect key="frame" x="89" y="8" width="45" height="18"/>
+                        <animations/>
                         <constraints>
                             <constraint firstAttribute="width" constant="105" id="6hm-jP-0QN"/>
                             <constraint firstAttribute="height" constant="19" id="Lr1-hL-lJJ"/>
@@ -60,7 +62,8 @@
                         </variation>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="正常班" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QER-6h-0IJ">
-                        <rect key="frame" x="139" y="8" width="39" height="16"/>
+                        <rect key="frame" x="142" y="8" width="39" height="16"/>
+                        <animations/>
                         <constraints>
                             <constraint firstAttribute="height" constant="19" id="InZ-db-O2S"/>
                             <constraint firstAttribute="height" constant="21" id="Yen-hd-fVd"/>
@@ -83,6 +86,7 @@
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="签到位置:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8U3-Tl-ZDv">
                         <rect key="frame" x="8" y="32" width="56" height="16"/>
+                        <animations/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="MLA-fN-a4b"/>
                             <constraint firstAttribute="height" constant="19" id="WOv-Hs-S3t"/>
@@ -108,6 +112,7 @@
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="签到时间:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jks-hv-Hpd">
                         <rect key="frame" x="8" y="56" width="56" height="16"/>
+                        <animations/>
                         <constraints>
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="7MP-ny-Y6V"/>
                             <constraint firstAttribute="height" constant="19" id="CRA-GV-wgD"/>
@@ -129,7 +134,8 @@
                         </variation>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="14:50" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Fs-qv-N9y">
-                        <rect key="frame" x="72" y="56" width="34" height="16"/>
+                        <rect key="frame" x="72" y="56" width="35" height="16"/>
+                        <animations/>
                         <constraints>
                             <constraint firstAttribute="width" constant="105" id="6jg-OZ-HN2"/>
                             <constraint firstAttribute="height" constant="19" id="NQr-8F-8UA"/>
@@ -152,6 +158,7 @@
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="签退位置:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="56" translatesAutoresizingMaskIntoConstraints="NO" id="6l1-93-OmW">
                         <rect key="frame" x="8" y="80" width="56" height="16"/>
+                        <animations/>
                         <constraints>
                             <constraint firstAttribute="width" constant="56" id="NJX-NV-N0K"/>
                             <constraint firstAttribute="height" constant="21" id="Ow4-7G-6ye"/>
@@ -177,6 +184,7 @@
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" tag="1000" contentMode="left" verticalHuggingPriority="251" text="四川省成都市武侯区天府五街" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="241" translatesAutoresizingMaskIntoConstraints="NO" id="mNW-Ez-KBb">
                         <rect key="frame" x="72" y="80" width="249" height="16"/>
+                        <animations/>
                         <constraints>
                             <constraint firstAttribute="width" constant="105" id="3DE-Ym-Js2"/>
                             <constraint firstAttribute="height" constant="19" id="DKA-XS-t7J"/>
@@ -199,6 +207,7 @@
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="签退时间:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gcr-7b-gR9">
                         <rect key="frame" x="8" y="104" width="56" height="16"/>
+                        <animations/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="7VS-53-Tzk"/>
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="8ok-mH-ZiH"/>
@@ -220,7 +229,8 @@
                         </variation>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="14:50" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R9x-Pm-Gbn">
-                        <rect key="frame" x="72" y="104" width="34" height="16"/>
+                        <rect key="frame" x="72" y="104" width="35" height="16"/>
+                        <animations/>
                         <constraints>
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="8Y9-Vx-gd6"/>
                             <constraint firstAttribute="width" constant="105" id="Bxt-JN-7oI"/>
@@ -243,6 +253,7 @@
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="状态:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6tp-Zf-qU8">
                         <rect key="frame" x="8" y="128" width="30" height="16"/>
+                        <animations/>
                         <constraints>
                             <constraint firstAttribute="height" constant="19" id="dGu-dP-Spv"/>
                             <constraint firstAttribute="height" constant="19" id="eAC-pI-lEy"/>
@@ -264,7 +275,8 @@
                         </variation>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="异常/迟到/未知" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J98-Aw-D8x">
-                        <rect key="frame" x="46" y="128" width="88" height="16"/>
+                        <rect key="frame" x="46" y="128" width="87" height="16"/>
+                        <animations/>
                         <constraints>
                             <constraint firstAttribute="width" constant="88" id="7Bn-6U-Y88"/>
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="Ahx-go-Ic1"/>
@@ -278,6 +290,7 @@
                         <nil key="highlightedColor"/>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="7Bn-6U-Y88"/>
                                 <exclude reference="Ahx-go-Ic1"/>
                                 <exclude reference="FGT-cN-uxj"/>
                                 <exclude reference="Zry-eD-weP"/>
@@ -288,6 +301,7 @@
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" tag="1001" contentMode="top" verticalHuggingPriority="251" text="四川省成都市武侯区天府五街" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" preferredMaxLayoutWidth="241" translatesAutoresizingMaskIntoConstraints="NO" id="NVD-mL-CLk">
                         <rect key="frame" x="72" y="32" width="249" height="16"/>
+                        <animations/>
                         <constraints>
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="4g6-eB-4kR"/>
                             <constraint firstAttribute="height" constant="19" id="6Lh-Ja-8Zq"/>
@@ -309,6 +323,7 @@
                         </variation>
                     </label>
                 </subviews>
+                <animations/>
                 <constraints>
                     <constraint firstItem="8U3-Tl-ZDv" firstAttribute="top" secondItem="fTe-xd-WCE" secondAttribute="bottom" constant="8" id="2B7-aK-kGi"/>
                     <constraint firstItem="gcr-7b-gR9" firstAttribute="top" secondItem="6l1-93-OmW" secondAttribute="bottom" constant="8" id="2Qh-Tl-Wlt"/>
@@ -380,6 +395,7 @@
                     </mask>
                 </variation>
             </tableViewCellContentView>
+            <animations/>
             <connections>
                 <outlet property="DateLabe" destination="fTe-xd-WCE" id="xBx-qM-oDa"/>
                 <outlet property="SignInTImeLabel" destination="1Fs-qv-N9y" id="vnc-iM-WNJ"/>

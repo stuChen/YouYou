@@ -28,15 +28,16 @@
     [dataFormatter setDateFormat:@"EEEE"];
     self.WeekDayLabel.text = [dataFormatter stringFromDate:date];
     
-    __block NSString *DayType;
-    [[Data Share].DayTypeArray enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-        if ([obj[@"key"] integerValue] == [data[@"DayType"] integerValue]) {
-            DayType = [NSString stringWithFormat:@"%@",obj[@"value"]];
-        }
-    }];
-    if (DayType) {
-        self.dayTypeLabel.text = DayType;
-    }
+//    __block NSString *DayType;
+//    [[Data Share].DayTypeArray enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+//        if ([obj[@"key"] integerValue] == [data[@"DayType"] integerValue]) {
+//            DayType = [NSString stringWithFormat:@"%@",obj[@"value"]];
+//        }
+//    }];
+//    if (DayType) {
+//        self.dayTypeLabel.text = DayType;
+//    }
+    self.dayTypeLabel.text = [[Data Share] ChooseInfo:data key:@"DayType" array:[Data Share].DayTypeArray];
     
     self.signInLabel.text = [NSString stringWithFormat:@"%@",data[@"signin_addr"]];
     self.SignInTImeLabel.text = [NSString stringWithFormat:@"%@",data[@"signin_time"]];

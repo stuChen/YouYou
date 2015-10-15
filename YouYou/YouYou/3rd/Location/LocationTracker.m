@@ -26,6 +26,15 @@
 			_locationManager = [[CLLocationManager alloc] init];
             _locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters;
             _locationManager.pausesLocationUpdatesAutomatically = NO; //该模式是抵抗ios在后台杀死程序设置，iOS会根据当前手机使用状况会自动关闭某些应用程序的后台刷新，该语句申明不能够被暂停，但是不一定,iOS系统在性能不佳的情况下强制结束应用刷新
+            //??这样的顺序，将导致bug：第一次启动程序后，系统将只请求?的权限，?的权限系统不会请求，只会在下一次启动应用时请求?
+            if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8) {
+                //[_locationManager requestWhenInUseAuthorization];//?只在前台开启定位
+                [_locationManager requestAlwaysAuthorization];//?在后台也可定位
+            }
+            // 5.iOS9新特性：将允许出现这种场景：同一app中多个location manager：一些只能在前台定位，另一些可在后台定位（并可随时禁止其后台定位）。
+            if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 9) {
+                _locationManager.allowsBackgroundLocationUpdates = YES; 
+            }
 		}
 	}
 	return _locationManager;
