@@ -1179,7 +1179,7 @@
 					"$(PROJECT_DIR)/YouYou/3rd/lib",
 				);
 				PRODUCT_NAME = "优幼销售管理";
-				PROVISIONING_PROFILE = "6380bd43-154d-4d5e-91d9-8e742ce3f328";
+				PROVISIONING_PROFILE = "372cc261-9cf6-4cde-8ffc-5a9509ae335e";
 				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
@@ -1206,7 +1206,7 @@
 					"$(PROJECT_DIR)/YouYou/3rd/lib",
 				);
 				PRODUCT_NAME = "优幼销售管理";
-				PROVISIONING_PROFILE = "6380bd43-154d-4d5e-91d9-8e742ce3f328";
+				PROVISIONING_PROFILE = "372cc261-9cf6-4cde-8ffc-5a9509ae335e";
 				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Release;

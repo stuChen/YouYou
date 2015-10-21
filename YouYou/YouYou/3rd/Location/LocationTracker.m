@@ -162,6 +162,15 @@
             //Add the vallid location with good accuracy into an array
             //Every 1 minute, I will select the best location based on accuracy and send to server
             [self.shareModel.myLocationArray addObject:dict];
+            
+            
+            //开始更新
+            static dispatch_once_t disOnce;
+            dispatch_once(&disOnce,  ^ {
+                // 该干嘛就干嘛
+                //开启定时上传坐标
+                [[NSNotificationCenter defaultCenter] postNotificationName:@"startUplocationTracker" object:nil];
+            });
         }
     }
     

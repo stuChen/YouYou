@@ -91,7 +91,11 @@
     [self.locationTracker startLocationTracking];
 }
 -(void)setUpLocationTraker{
-    [self performSelector:@selector(updateLocation) withObject:nil afterDelay:2];
+    
+    if (self.locationTracker.shareModel.myLocationArray.count > 0) {
+        [self updateLocation];
+    }
+//    [self performSelector:@selector(updateLocation) withObject:nil afterDelay:2];
 }
 //第一次请求完成
 - (void)startTimer:(NSDictionary *)dic {
