@@ -54,6 +54,7 @@
 //    NSLog(@"后台任务%@",[[NSUserDefaults standardUserDefaults] objectForKey:@"backgroundtask"]);
     
     //接受开启定位服务通知
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(initTrack) name:@"startInitlocationTracker" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(setUpLocationTraker) name:@"startUplocationTracker" object:nil];
     //接收定位服务关闭通知
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(stopTracker) name:@"stopUplocationTracker" object:nil];
@@ -65,7 +66,7 @@
                                                    UIRemoteNotificationTypeAlert)
                                        categories:nil];
     [APService setupWithOption:launchOptions];
-    [self initTrack];
+
     
     return YES;
 }
@@ -92,7 +93,7 @@
 }
 -(void)setUpLocationTraker{
     
-    if (self.locationTracker.shareModel.myLocationArray.count > 0) {
+    if (self.locationTracker.shareModel.myLocationArray.count > 0 && [UserData keyForUser:@"token"]) {
         [self updateLocation];
     }
 //    [self performSelector:@selector(updateLocation) withObject:nil afterDelay:2];

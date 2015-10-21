@@ -64,10 +64,17 @@
     self.navigationItem.leftBarButtonItem = item;
     
     
+    //开启服务
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"startInitlocationTracker" object:nil];
+    [self performSelector:@selector(delayToUploadLocation) withObject:nil afterDelay:5];
+}
+
+- (void)delayToUploadLocation {
     //开启定时上传坐标
     [[NSNotificationCenter defaultCenter] postNotificationName:@"startUplocationTracker" object:nil];
     [self setTags];
 }
+
 //设置标签
 - (void)setTags {
     NSString *alias = [NSString stringWithFormat:@"YY_IOS_%@",[UserData keyForUser:@"username"]];
@@ -222,6 +229,8 @@ static int try = 0;
 #pragma mark - alertDelegate
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
     if (buttonIndex == 1) {
+        //移除本地
+        [UserData Deletekey:@"token"];
         //取消设置标签
         [APService setTags:[NSSet set] alias:@"" callbackSelector:@selector(tagsAliasCallback:tags:alias:) target:self];
         //结束定时上传坐标
