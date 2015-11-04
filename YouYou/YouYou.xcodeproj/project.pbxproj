@@ -14,8 +14,8 @@
 		747982CC1B450134000511A8 /* NoticeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 747982C81B450134000511A8 /* NoticeTableViewCell.m */; };
 		747982CD1B450134000511A8 /* NoticeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 747982C91B450134000511A8 /* NoticeTableViewCell.xib */; };
 		747982CE1B450134000511A8 /* YY_Button.m in Sources */ = {isa = PBXBuildFile; fileRef = 747982CB1B450134000511A8 /* YY_Button.m */; };
-		74980E5F1BB2E29E00F95401 /* libPushSDK-1.8.5.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 74980E5D1BB2E29E00F95401 /* libPushSDK-1.8.5.a */; settings = {ASSET_TAGS = (); }; };
-		74980E601BB2E29E00F95401 /* PushConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 74980E5E1BB2E29E00F95401 /* PushConfig.plist */; settings = {ASSET_TAGS = (); }; };
+		74980E5F1BB2E29E00F95401 /* libPushSDK-1.8.5.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 74980E5D1BB2E29E00F95401 /* libPushSDK-1.8.5.a */; };
+		74980E601BB2E29E00F95401 /* PushConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 74980E5E1BB2E29E00F95401 /* PushConfig.plist */; };
 		74A675321B4FFC79007D043E /* ReplyWorkPlanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74A675301B4FFC79007D043E /* ReplyWorkPlanViewController.m */; };
 		74A675331B4FFC79007D043E /* ReplyWorkPlanViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74A675311B4FFC79007D043E /* ReplyWorkPlanViewController.xib */; };
 		74A675371B500C58007D043E /* AskToLeaveDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74A675351B500C58007D043E /* AskToLeaveDetailViewController.m */; };
@@ -1171,7 +1171,7 @@
 				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/YouYou/PrefixHeader.pch";
 				INFOPLIST_FILE = YouYou/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1198,7 +1198,7 @@
 				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/YouYou/PrefixHeader.pch";
 				INFOPLIST_FILE = YouYou/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",

@@ -46,11 +46,17 @@
     [self.window makeKeyAndVisible];
 //    NSString *passWord =  [SFHFKeychainUtils getPasswordForUsername:@"dd" andServiceName:SERVICE_NAME error:nil];
 //    [SFHFKeychainUtils storeUsername:@"dd" andPassword:@"aa" forServiceName:SERVICE_NAME updateExisting:1 error:nil];
-    
-    [MobClick startWithAppkey:@"55f05409e0f55a70a20051d8" reportPolicy:BATCH   channelId:@"Web"];
-    NSString *version = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
-    [MobClick setAppVersion:version];
-    [MobClick setLogEnabled:YES];
+    // 主线程执行：
+    dispatch_async(dispatch_get_main_queue(), ^{
+        // something
+        [MobClick startWithAppkey:@"55f05409e0f55a70a20051d8" reportPolicy:BATCH   channelId:@"Web"];
+        NSString *version = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
+        [MobClick setAppVersion:version];
+        [MobClick setLogEnabled:YES];
+        [MobClick setCrashReportEnabled:YES];
+        [MobClick setBackgroundTaskEnabled:YES];
+    });
+
 //    NSLog(@"后台任务%@",[[NSUserDefaults standardUserDefaults] objectForKey:@"backgroundtask"]);
     
     //接受开启定位服务通知
@@ -251,8 +257,14 @@
 
 - (void)application:(UIApplication *)application
 didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
-
-    NSLog(@"%@", [NSString stringWithFormat:@"Device Token: %@", deviceToken]);
+    NSString *pushToken = [[[[deviceToken description]
+                             stringByReplacingOccurrencesOfString:@"<" withString:@""]
+                            stringByReplacingOccurrencesOfString:@">" withString:@""]
+                           stringByReplacingOccurrencesOfString:@" " withString:@""] ;
+//    NSLog(@"%@", [NSString stringWithFormat:@"Device Token: %@", deviceToken]);
+    if (![UserData keyForUser:@"pushToken"]) {
+        [UserData Value:pushToken forKey:@"pushToken"];
+    }
     [APService registerDeviceToken:deviceToken];
 }
 

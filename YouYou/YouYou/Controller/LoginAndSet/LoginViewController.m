@@ -60,9 +60,10 @@
     }
     else {
         [_loginBtn setTitle:@"登录中" forState:UIControlStateNormal];
-        [RequestManager PostUrl:[RequestUrl Login] loding:@"登录中..." dic:@{@"username":_nameText.text,
-                                                                          @"password":_passwordText.text,
-                                                                          @"imei":@"ios"}
+        NSDictionary *dic = @{@"username":_nameText.text,
+                              @"password":_passwordText.text,
+                              @"imei":[UserData keyForUser:@"pushToken"] ? [UserData keyForUser:@"pushToken"] : @"ios"};
+        [RequestManager PostUrl:[RequestUrl Login] loding:@"登录中..." dic:dic
                        response:^(id response) {
             if (response) {
                 if ([response[@"status_code"] integerValue] == 0) {

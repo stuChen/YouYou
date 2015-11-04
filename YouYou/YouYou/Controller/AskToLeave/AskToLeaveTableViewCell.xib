@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
@@ -12,11 +12,12 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="117"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="116"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="休假时间:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ae-hc-QRg">
                         <rect key="frame" x="8" y="8" width="56" height="21"/>
+                        <animations/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="FjQ-Fd-6dE"/>
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="eCO-MW-RIk"/>
@@ -32,6 +33,7 @@
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="休假天数:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PrQ-n6-4PB">
                         <rect key="frame" x="8" y="37" width="56" height="16"/>
+                        <animations/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="LWZ-3r-TdP"/>
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="WkM-q9-od2"/>
@@ -48,6 +50,7 @@
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="批阅状态:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ibb-rh-zRK">
                         <rect key="frame" x="8" y="61" width="56" height="16"/>
+                        <animations/>
                         <constraints>
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="gYe-LL-pt9"/>
                             <constraint firstAttribute="height" constant="21" id="sQ7-Mq-QS6"/>
@@ -64,6 +67,7 @@
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="批阅意见:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GR8-wV-SWw">
                         <rect key="frame" x="8" y="85" width="56" height="16"/>
+                        <animations/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="1mV-iu-PGW"/>
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="t6r-Pk-GBM"/>
@@ -80,6 +84,7 @@
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="1.0天" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zDZ-LL-ayk">
                         <rect key="frame" x="72" y="37" width="240" height="16"/>
+                        <animations/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="JCn-c8-VdX"/>
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="lt2-Oq-awv"/>
@@ -96,6 +101,7 @@
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="带批阅" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lug-B9-y41">
                         <rect key="frame" x="72" y="61" width="240" height="16"/>
+                        <animations/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="ivC-wR-zlA"/>
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="n2P-ay-dLg"/>
@@ -112,6 +118,7 @@
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" tag="10001" contentMode="left" verticalHuggingPriority="251" text="带批阅" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="240" translatesAutoresizingMaskIntoConstraints="NO" id="uNT-d2-7eW">
                         <rect key="frame" x="72" y="85" width="240" height="16"/>
+                        <animations/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="Psb-v8-hKO"/>
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="SVC-gy-sQe"/>
@@ -127,6 +134,7 @@
                         </variation>
                     </label>
                 </subviews>
+                <animations/>
                 <constraints>
                     <constraint firstItem="lug-B9-y41" firstAttribute="leading" secondItem="Ibb-rh-zRK" secondAttribute="trailing" constant="8" id="BnD-K3-yTZ"/>
                     <constraint firstItem="GR8-wV-SWw" firstAttribute="top" secondItem="Ibb-rh-zRK" secondAttribute="bottom" constant="8" id="Lmn-cB-CHc"/>
@@ -154,6 +162,7 @@
                     </mask>
                 </variation>
             </tableViewCellContentView>
+            <animations/>
             <connections>
                 <outlet property="howLong" destination="zDZ-LL-ayk" id="Tsu-OW-D46"/>
                 <outlet property="remark" destination="uNT-d2-7eW" id="eRY-en-Sda"/>

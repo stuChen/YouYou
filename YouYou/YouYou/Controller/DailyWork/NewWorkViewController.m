@@ -173,7 +173,7 @@
 
 - (IBAction)uploadWorkLog:(id)sender
 {
-    if (self.selectedIndexPath1 && self.selectedIndexPath2 && self.selectedIndexPath3 && self.selectedIndexPath4 && self.textView.text.length > 0) {
+    if (self.selectedIndexPath1 && self.selectedIndexPath2 && self.selectedIndexPath3 && self.selectedIndexPath4 && self.textView.text.length > 0 && [Data Share].CustomArray) {
         [dateFormatter setDateFormat:@"yyyy-MM-dd"];
         
         NSDictionary *dic;
