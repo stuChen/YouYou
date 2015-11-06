@@ -44,7 +44,7 @@ static NSString *dequeString = @"group";
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UILabel *NeedResizeLabel = (UILabel *)[self.prototypeCell.contentView viewWithTag:10001];
-    [NeedResizeLabel setText:_dataArray[indexPath.row][@"remark"]];
+    [NeedResizeLabel setText:[NSString stringWithFormat:@"%@",_dataArray[indexPath.row][@"remark"]]];
     
     [self.prototypeCell setNeedsUpdateConstraints];
     [self.prototypeCell updateConstraintsIfNeeded];

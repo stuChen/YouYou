@@ -41,6 +41,24 @@ THE SOFTWARE.
 		</dict>
 		<dict>
 			<key>FooterText</key>
+			<string>Copyright 2015 pgyer.com. All rights reserved.
+</string>
+			<key>Title</key>
+			<string>PgyUpdate</string>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+		</dict>
+		<dict>
+			<key>FooterText</key>
+			<string>Copyright 2015 pgyer.com. All rights reserved.
+</string>
+			<key>Title</key>
+			<string>Pgyer</string>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+		</dict>
+		<dict>
+			<key>FooterText</key>
 			<string>The MIT License (MIT)
 
 Copyright (c) 2014 

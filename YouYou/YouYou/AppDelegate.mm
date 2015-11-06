@@ -17,6 +17,9 @@
 #import "NSDate+FSExtension.h"
 #import "MobClick.h"
 #import "APService.h"
+#import <PgySDK/PgyManager.h>
+#import <PgyUpdate/PgyUpdateManager.h>
+
 @interface AppDelegate ()
 @property LocationTracker * locationTracker;
 @property (nonatomic) NSTimer* locationUpdateTimer;
@@ -31,6 +34,14 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [IQKeyboardManager sharedManager];
     [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeGradient];
+    // 设置用户反馈界面激活方式为摇一摇
+    [[PgyManager sharedPgyManager] setFeedbackActiveType:kPGYFeedbackActiveTypeShake];
+    //启动基本SDK
+    [[PgyManager sharedPgyManager] startManagerWithAppId:@"6735f0996cb2b76c3c9c037726aaff40"];
+    //启动更新检查SDK
+    [[PgyUpdateManager sharedPgyManager] startManagerWithAppId:@"6735f0996cb2b76c3c9c037726aaff40"];
+    [[PgyUpdateManager sharedPgyManager] checkUpdate];
+    
     
     // 要使用百度地图，请先启动BaiduMapManager
     _mapManager = [[BMKMapManager alloc]init];

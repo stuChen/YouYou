@@ -1,6 +1,8 @@
 platform :ios, "7.0"
 
 pod "SVProgressHUD"
+pod "Pgyer"
 pod "FSCalendar"
 pod "RichStyleLabel"
+pod 'PgyUpdate'
 pod 'UMengAnalytics-NO-IDFA'

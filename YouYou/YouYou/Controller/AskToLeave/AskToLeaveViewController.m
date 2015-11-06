@@ -126,7 +126,7 @@
         cell.imageView.image = [UIImage imageNamed:@"fs_main_login_normal.png"];
     }
     cell.textLabel.textAlignment = NSTextAlignmentCenter;
-    cell.textLabel.text = _selectArrray[indexPath.row][@"value"];//[NSString stringWithFormat:@"-dsds---%ld------", (long)indexPath.row];
+    cell.textLabel.text = [NSString stringWithFormat:@"%@",_selectArrray[indexPath.row][@"value"]];//[NSString stringWithFormat:@"-dsds---%ld------", (long)indexPath.row];
     return cell;
 }
 
