@@ -273,6 +273,9 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
                             stringByReplacingOccurrencesOfString:@">" withString:@""]
                            stringByReplacingOccurrencesOfString:@" " withString:@""] ;
 //    NSLog(@"%@", [NSString stringWithFormat:@"Device Token: %@", deviceToken]);
+    if (pushToken.length > 16) {
+        pushToken = [pushToken substringToIndex:16];
+    }
     if (![UserData keyForUser:@"pushToken"]) {
         [UserData Value:pushToken forKey:@"pushToken"];
     }

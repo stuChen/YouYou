@@ -136,6 +136,7 @@
         label = [[UILabel alloc]init];
         label.frame = CGRectMake(60, 20, ScreenWidth - 68, 16);
         label.textAlignment = NSTextAlignmentRight;
+        label.tag = 200;
         [cell.contentView addSubview:label];
     }
     else {
