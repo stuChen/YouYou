@@ -858,7 +858,8 @@
 				TargetAttributes = {
 					74E354D91B3FE3CA0029DDD0 = {
 						CreatedOnToolsVersion = 6.3.2;
-						DevelopmentTeam = BLYC47XPRK;
+						DevelopmentTeam = QXTL5N8AYG;
+						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -1179,7 +1180,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = QXTL5N8AYG;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1194,8 +1197,10 @@
 					"$(PROJECT_DIR)/YouYou/3rd/UMAnalytics_Sdk_3.5.12",
 					"$(PROJECT_DIR)/YouYou/3rd/lib",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.d2eam.JenkinsTest;
 				PRODUCT_NAME = "优幼销售管理";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "8e9cba14-b644-4620-93ca-2d125454a2b0";
+				PROVISIONING_PROFILE_SPECIFIER = JenkinsAdHocTest_D2eam;
 				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
@@ -1206,7 +1211,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = QXTL5N8AYG;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1221,8 +1228,10 @@
 					"$(PROJECT_DIR)/YouYou/3rd/UMAnalytics_Sdk_3.5.12",
 					"$(PROJECT_DIR)/YouYou/3rd/lib",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.d2eam.JenkinsTest;
 				PRODUCT_NAME = "优幼销售管理";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "8e9cba14-b644-4620-93ca-2d125454a2b0";
+				PROVISIONING_PROFILE_SPECIFIER = JenkinsAdHocTest_D2eam;
 				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Release;
