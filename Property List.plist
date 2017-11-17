@@ -8,5 +8,10 @@
 	<string>ad-hoc</string>
 	<key>uploadSymbols</key>
 	<false/>
+	<key>provisionProfiles</key>
+	<dict>
+		<key>bundleID</key>
+		<string>com.d2eam.JenkinsTest</string>
+	</dict>
 </dict>
 </plist>
