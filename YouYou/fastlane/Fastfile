@@ -60,7 +60,7 @@ export_options: {
           #右侧表示你的项目在选择export_method后,对应的描述文件名字
           "com.d2eam.JenkinsTest" => "JenkinsAdHocTest_D2eam"
         }
-}
+},
 
 # 指定输出文件夹
 output_directory:"./fastlane/build",
