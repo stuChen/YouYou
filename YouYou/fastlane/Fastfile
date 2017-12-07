@@ -1,5 +1,5 @@
 lane :beta do
-    gym(scheme: "AppScheme",
+    gym(scheme: “YouYou”,
     #output_name 指打包完成后, 输出ipa文件的名字
     output_name: "APPName_Debug",
     #export_method 打包版本选择
