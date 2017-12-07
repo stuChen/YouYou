@@ -1182,6 +1182,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 20171207.01;
 				DEVELOPMENT_TEAM = QXTL5N8AYG;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1202,6 +1203,7 @@
 				PROVISIONING_PROFILE = "8e9cba14-b644-4620-93ca-2d125454a2b0";
 				PROVISIONING_PROFILE_SPECIFIER = JenkinsAdHocTest_D2eam;
 				USER_HEADER_SEARCH_PATHS = "";
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
 		};
@@ -1213,6 +1215,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 20171207.01;
 				DEVELOPMENT_TEAM = QXTL5N8AYG;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1233,6 +1236,7 @@
 				PROVISIONING_PROFILE = "8e9cba14-b644-4620-93ca-2d125454a2b0";
 				PROVISIONING_PROFILE_SPECIFIER = JenkinsAdHocTest_D2eam;
 				USER_HEADER_SEARCH_PATHS = "";
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
 		};

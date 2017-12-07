@@ -1,85 +1,66 @@
-# Customize this file, documentation can be found here:
-# https://docs.fastlane.tools/actions/
-# All available actions: https://docs.fastlane.tools/actions
-# can also be listed using the `fastlane actions` command
+# 定义fastlane版本号
+fastlane_version “2.68.2” 
 
-# Change the syntax highlighting to Ruby
-# All lines starting with a # are ignored when running `fastlane`
-
-# If you want to automatically update fastlane if a new version is available:
-# update_fastlane
-
-# This is the minimum version number required.
-# Update this, if you use features of a newer version
-fastlane_version "2.64.1"
-
+# 定义打包平台
 default_platform :ios
 
-platform :ios do
-  before_all do
-    # ENV["SLACK_URL"] = "https://hooks.slack.com/services/..."
-    cocoapods
-    # carthage
-  end
+def updateProjectBuildNumber
 
-  desc "Runs all the tests"
-  lane :test do
-    scan
-  end
-
-  desc "Submit a new Beta Build to Apple TestFlight"
-  desc "This will also make sure the profile is up to date"
-  lane :beta do
-    # match(type: "appstore") # more information: https://codesigning.guide
-    gym(scheme: "YouYou") # Build your app - more options available
-    pilot
-
-    # sh "your_script.sh"
-    # You can also use other beta testing services here (run `fastlane actions`)
-  end
-
-  desc "Deploy a new version to the App Store"
-  lane :release do
-    # match(type: "appstore")
-    # snapshot
-    gym(scheme: "YouYou") # Build your app - more options available
-    deliver(force: true)
-    # frameit
-    #output_name 指打包完成后, 输出ipa文件的名字
-    output_name: "APPName_Debug”,
-    #export_method 打包版本选择
-    #分别是app-store、ad-hoc、development、enterprise
-    export_method: "ad-hoc”,
-        export_options: {
-          provisioningProfiles: { 
-          #左侧表示你的项目的bundle id
-          #右侧表示你的项目在选择export_method后,对应的描述文件名字
-          "com.d2eam.JenkinsTest" => "JenkinsAdHocTest_D2eam.mobileprovision"
-        }
-       })
-  end
-
-  # You can define as many lanes as you want
-
-  after_all do |lane|
-    # This block is called, only if the executed lane was successful
-
-    # slack(
-    #   message: "Successfully deployed new App Update."
-    # )
-  end
-
-  error do |lane, exception|
-    # slack(
-    #   message: exception.message,
-    #   success: false
-    # )
-  end
+currentTime = Time.new.strftime("%Y%m%d")
+build = get_build_number()
+if build.include?"#{currentTime}."
+# => 为当天版本 计算迭代版本号
+lastStr = build[build.length-2..build.length-1]
+lastNum = lastStr.to_i
+lastNum = lastNum + 1
+lastStr = lastNum.to_s
+if lastNum < 10
+lastStr = lastStr.insert(0,"0")
+end
+build = "#{currentTime}.#{lastStr}"
+else
+# => 非当天版本 build 号重置
+build = "#{currentTime}.01"
+end
+puts("*************| 更新build #{build} |*************")
+# => 更改项目 build 号
+increment_build_number(
+build_number: "#{build}"
+)
 end
 
+#指定项目的scheme名称
+scheme=“YouYou”
+#蒲公英api_key和user_key
+api_key=“2535abac8c34e0afce91f6a2bf8420c4”
+user_key=“97a6c001a43f31a06b09312f1616ea06”
 
-# More information about multiple platforms in fastlane: https://docs.fastlane.tools/advanced/#control-configuration-by-lane-and-by-platform
-# All available actions: https://docs.fastlane.tools/actions
+# 任务脚本
+platform :ios do
+lane :development_build do|options|
+branch = options[:branch]
 
-# fastlane reports which actions are used. No personal data is recorded.
-# Learn more at https://docs.fastlane.tools/#metrics
+puts “开始打development ipa”
+
+updateProjectBuildNumber #更改项目build号
+
+# 开始打包
+gym(
+#输出的ipa名称
+output_name:”#{scheme}_#{get_build_number()}”,
+# 是否清空以前的编译信息 true：是
+clean:true,
+# 指定打包方式，Release 或者 Debug
+configuration:"Release",
+# 指定打包所使用的输出方式，目前支持app-store, package, ad-hoc, enterprise, development
+export_method:”ad-hoc”,
+# 指定输出文件夹
+output_directory:"./fastlane/build",
+)
+
+puts "开始上传蒲公英"
+# 开始上传蒲公英
+pgyer(api_key: “#{api_key}”, user_key: “#{user_key}”)
+
+end
+end
