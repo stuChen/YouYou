@@ -54,6 +54,14 @@ clean:true,
 configuration:"Release",
 # 指定打包所使用的输出方式，目前支持app-store, package, ad-hoc, enterprise, development
 export_method:”ad-hoc”,
+export_options: {
+          provisioningProfiles: { 
+          #左侧表示你的项目的bundle id
+          #右侧表示你的项目在选择export_method后,对应的描述文件名字
+          "com.d2eam.JenkinsTest" => "JenkinsAdHocTest_D2eam"
+        }
+}
+
 # 指定输出文件夹
 output_directory:"./fastlane/build",
 )
